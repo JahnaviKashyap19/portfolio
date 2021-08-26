@@ -1,0 +1,365 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+#particles-js
+{
+  background:#e2f0ff;
+  height:90vh;
+}
+.heading {
+  position: absolute;
+  text-align: center;
+  top: 27%;
+  width: 100%;
+}
+.heading h1 {
+  color:rgb(4, 4, 65);
+  font-size: 6vw;
+}  
+  .heading #text {
+    font-size: 3vw !important;
+    font-family:'Poppins', sans-serif;
+    font-weight: bolder;
+	display: inline-block;
+	vertical-align: middle;
+	color:#FF8C00;
+	letter-spacing: 2px;
+  
+    /* border:3px solid black; */
+}
+.heading #custom
+{
+    font-size: 3vw !important;
+    font-family:'Poppins', sans-serif;
+    font-weight: bolder;
+	display: inline-block;
+	vertical-align: middle;
+	color:black;
+	letter-spacing: 2px;
+    /* border:3px solid black; */
+}
+.heading #cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 7vw;
+	background-color: rgb(253, 143, 0);
+	animation: blink 1s step-end infinite;
+  margin:auto;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: orange; 
+	}
+}
+.wrapper{
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:100%;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  background: #000C66;
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+  background: #000C66;
+  transition: all 0.3s ease-in-out;
+  z-index: 4;
+}
+#active:checked ~ .menu-btn{
+  color: #fff;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width:fit-content;
+  /* border:2px solid pink; */
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 50px;
+  border-color:transparent;
+  background: #000C66;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+  /* border:2px solid white; */
+  
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%; /* if the font is 'Oswald'*/
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  animation: rotate 1.5s linear infinite;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #fff;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+/* Social Icons */
+.heading .social
+{
+    margin-top:30px;
+    position:center;
+    align-items: center;
+    /* border:2px solid black; */
+    width:fit-content;
+    margin:auto;
+    padding-top:20px;
+}
+.sm
+{
+    background-color: #fff;
+    border-radius: 100px;
+}
+.about
+{
+  background:rgb(69, 69, 124);
+  color:aliceblue;
+  overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.about h2
+{
+  text-align: center;
+  padding-top:5%;
+  padding-bottom:4px;
+  font-weight: bold;
+}
+.about a:hover
+{
+  background-color: rgb(255, 228, 107);
+  border:none;
+}
+.fa-user,.fa-graduation-cap
+{
+  padding-left:7px;
+}
+#propic
+{
+ width:75%;
+ height:100%;
+ padding:20px;
+ margin-left:10%;
+ transition: 2s;
+ box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);
+}
+#propic:hover{
+  transform:scale(1.1);
+  
+}
+#me
+{
+  padding:20px;
+}
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(119, 119, 255), rgb(255, 255, 255);
+  scroll-behavior: smooth;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(119, 119, 255);
+  border-radius: 20px;
+  border: 3px solid white;
+}
+.edu
+{
+  background-color:#fff;
+  color:#000C66;
+  /* height:60vw; */
+  padding:8px;
+  overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.edu h2
+{
+  text-align: center;
+  padding-top:2%;
+  padding-bottom:4px;
+  font-weight: bold;
+}
+.edu span{
+  font-weight: 200;
+}
+#edn
+{
+  width:70%;
+ height:75%;
+ padding:2px;
+ margin-left:20%;
+ 
+}
+.card
+{
+  background:whitesmoke;
+  padding:15px;
+  margin-top:35px;
+  border-radius: 7px;
+  border:1px solid black;
+  width:100%;
+  height:fit-content;
+}
+.card h4{
+  text-align: center;
+}
+.skill
+{
+  background: rgb(69, 69, 124);
+  color:aliceblue;
+  height:50%;
+  padding:10px;
+}
+.skill h2
+{
+  text-align: center;
+  padding-top:5%;
+  padding-bottom:4px;
+  font-weight: bold;
+}
+.skill .row
+{
+  padding :10px;
+  padding-left:50px;
+  margin-top:3%;
+  text-align:left;
+  
+}
+.contact
+{
+  background: white;
+  color:#000C66;
+  height:50%;
+  padding:10px;
+}
+.contact h2
+{
+text-align: center;
+}
+.contact .social
+{
+  margin-top:5% !important;
+  margin:auto;
+  width:fit-content;
+  /* border:2px solid red; */
+}
+.foo
+{
+  text-align: center;
+  color:rgb(150, 147, 144);
+  margin:30px !important;
+  padding:20px;
+}
+ #up
+{
+  color:#fff;
+  border-radius:50%;
+  background-color: rgb(69, 69, 124);
+  width:45px;
+  height:40px;
+  margin-left: 90%;
+}
+.last
+{
+  width:40%;
+  height:30%;
+  margin-left:30%;
+  margin-top:0;
+  margin-bottom:20px;
+  
+}
+
