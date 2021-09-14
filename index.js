@@ -1,4 +1,4 @@
-var text_arr=[" a Web Developer"," a Learner"," a CS student"," an Engineer"];
+var text_arr=[" an Explorer"," a Learner"," a CS student"," an Engineer"];
 var part=0;
 var part_index=0;
 var interval_val;
